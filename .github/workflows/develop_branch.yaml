@@ -75,6 +75,7 @@ jobs:
       run: mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
   build_push_docker:
     runs-on: ubuntu-22.04
+    name: Build and push docker image
     needs:
     - tests_sonar_domain
     - tests_sonar_infrastructure_api_rest
@@ -106,6 +107,7 @@ jobs:
           ghcr.io/jbwittner/api_atlas_hub_server:develop-${{ github.sha }}
   push_maven:
     runs-on: ubuntu-22.04
+    name: Push maven package
     needs:
     - tests_sonar_domain
     - tests_sonar_infrastructure_api_rest
