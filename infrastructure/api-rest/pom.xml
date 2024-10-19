@@ -9,10 +9,11 @@
     </parent>
     <groupId>fr.apiatlashub.server.infrastructure</groupId>
     <artifactId>api-rest</artifactId>
-    <name>ApiAtlasHub - Api REST</name>
+    <name>ApiAtlasHub - Infrastructure - Api REST</name>
     <properties>
         <maven.compiler.release>${application.java.version}</maven.compiler.release>
         <springboot.version>3.3.4</springboot.version>
+        <sonar.projectKey>jbwittner_apiatlashub_server_infrastructure_api_rest</sonar.projectKey>
     </properties>
     <dependencyManagement>
         <dependencies>

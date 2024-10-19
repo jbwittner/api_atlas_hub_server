@@ -12,6 +12,7 @@
     <properties>
         <maven.compiler.release>${application.java.version}</maven.compiler.release>
         <springboot.version>3.3.4</springboot.version>
+        <sonar.projectKey>jbwittner_apiatlashub_server_application</sonar.projectKey>
     </properties>
     <dependencyManagement>
         <dependencies>

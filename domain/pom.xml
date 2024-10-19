@@ -14,6 +14,7 @@
     <properties>
         <maven.compiler.source>${application.java.version}</maven.compiler.source>
         <maven.compiler.target>${application.java.version}</maven.compiler.target>
+        <sonar.projectKey>jbwittner_apiatlashub_server_domain</sonar.projectKey>
     </properties>
     <dependencies>
         <dependency>
