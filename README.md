@@ -1,4 +1,4 @@
-# api_atlas_hub_server
+# ApiAtlasHub Server
 
 The server-side component of ApiAtlasHub.
 
