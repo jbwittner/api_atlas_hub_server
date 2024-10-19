@@ -1,12 +1,11 @@
-package fr.apiatlashub.server.application;
+package fr.apiatlashub.server.infrastructure.apirest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
-
+public class StarterWebLayer {
     public static void main(final String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(StarterWebLayer.class, args);
     }
 }

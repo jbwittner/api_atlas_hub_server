@@ -5,5 +5,4 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("fr.apiatlashub.server.infrastructure.apirest")
-public class AggregationConfiguration {
-}
+public class AggregationConfiguration {}
