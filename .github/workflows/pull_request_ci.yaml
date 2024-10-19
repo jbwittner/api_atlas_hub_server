@@ -92,18 +92,18 @@ jobs:
     env:
       SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}"
     needs:
-      - check-spotless
-      - checkstyle
+    - check-spotless
+    - checkstyle
     steps:
-      - name: Checkout Git repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Setup action
-        uses: ./.github/actions/setup-env
-      - name: Test and analyse
-        working-directory: application
-        run: mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+    - name: Checkout Git repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Setup action
+      uses: ./.github/actions/setup-env
+    - name: Test and analyse
+      working-directory: application
+      run: mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
   build_docker:
     runs-on: ubuntu-22.04
     needs:
