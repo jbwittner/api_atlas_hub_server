@@ -1,0 +1,2 @@
+spotless:
+  mvn spotless:apply
