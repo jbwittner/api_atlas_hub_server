@@ -1,0 +1,6 @@
+---
+application:
+  server:
+    port: 9090
+server:
+  port: "${application.server.port}"
