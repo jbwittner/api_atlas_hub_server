@@ -6,12 +6,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import fr.apiatlashub.server.domain.api.SimpleApi;
+import lombok.RequiredArgsConstructor;
+
 @RestController
 @RequestMapping("/simple")
+@RequiredArgsConstructor
 public class SimpleController {
+
+    private final SimpleApi simpleApi;
 
     @GetMapping
     public ResponseEntity<String> simple() {
-        return new ResponseEntity<>("Simple result", HttpStatus.OK);
+        final var result = simpleApi.sayHello();
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }
