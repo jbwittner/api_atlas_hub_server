@@ -52,7 +52,7 @@ jobs:
       run: mvn -B checkstyle:checkstyle
   tests_sonar_domain:
     runs-on: ubuntu-22.04
-    name: Test and analyse domain
+    name: Test domain
     env:
       SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}"
     needs:
@@ -70,7 +70,7 @@ jobs:
       run: mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
   tests_sonar_infrastructure_api_rest:
     runs-on: ubuntu-22.04
-    name: Test and analyse infrastructure (api rest)
+    name: Test API REST
     env:
       SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}"
     needs:
@@ -88,7 +88,7 @@ jobs:
       run: mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
   tests_sonar_infrastructure_spi_jpa:
     runs-on: ubuntu-22.04
-    name: Test and analyse infrastructure (spi jpa)
+    name: Test SPI JPA
     env:
       SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}"
     needs:
@@ -106,7 +106,7 @@ jobs:
       run: mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
   tests_sonar_application:
     runs-on: ubuntu-22.04
-    name: Test and analyse application
+    name: Test application
     env:
       SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}"
     needs:
@@ -124,6 +124,7 @@ jobs:
       run: mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
   build_docker:
     runs-on: ubuntu-22.04
+    name: Build Docker image (without push)
     needs:
     - tests_sonar_domain
     - tests_sonar_infrastructure_api_rest
