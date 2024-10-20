@@ -3,7 +3,7 @@ volumes:
   db_apiatlashub_volume: null
 services:
   db:
-    image: mysql:9.0
+    image: mysql:9.0.0
     container_name: apiatlashub_database
     ports:
     - 3306:3306

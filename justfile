@@ -22,6 +22,9 @@ spotless:
 spotless-check:
     mvn spotless:check
 
+start-jar-dev:
+    java -jar application/target/application-*.jar --spring.profiles.active=development
+
 restore-system:
 	docker exec -i {{DB_CONTAINER_NAME}} sh -c 'exec mysql -uroot -p"{{DB_ROOT_PASSWORD}}"' < sql/prepare.sql
 

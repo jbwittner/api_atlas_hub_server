@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @ComponentScans({
     @ComponentScan(basePackages = "fr.apiatlashub.server.infrastructure.apirest"),
-    @ComponentScan(basePackages = "fr.apiatlashub.server.infrastructure.spijpa")
+    @ComponentScan(basePackages = "fr.apiatlashub.server.infrastructure.spijpa"),
 })
 @EntityScan("fr.apiatlashub.server.infrastructure.spijpa.spi.database.entity")
 @EnableJpaRepositories("fr.apiatlashub.server.infrastructure.spijpa.spi.database.repository")

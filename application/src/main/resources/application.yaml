@@ -1,5 +1,7 @@
 ---
 application:
+  url: http://localhost:9595
+  cors-allowed-origins: ""
   server:
     port: 9595
   db:
@@ -8,6 +10,9 @@ application:
     name: dbname
     user: dbuser
     password: dbpassword
+  oauth2:
+    issuer-uri: https://example.com/
+    audience: audience
 server:
   port: "${application.server.port}"
 spring:
@@ -24,3 +29,9 @@ spring:
     url: "jdbc:mysql://${application.db.host}:${application.db.port}/${application.db.name}"
     username: "${application.db.user}"
     password: "${application.db.password}"
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "${application.oauth2.issuer-uri}"
+          jwk-set-uri: "${application.oauth2.issuer-uri}.well-known/jwks.json"
