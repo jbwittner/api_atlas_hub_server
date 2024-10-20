@@ -11,6 +11,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
     @ComponentScan(basePackages = "fr.apiatlashub.server.infrastructure.apirest"),
     @ComponentScan(basePackages = "fr.apiatlashub.server.infrastructure.spijpa")
 })
-@EntityScan("fr.apiatlashub.server.infrastructure.spijpa.database.entity")
-@EnableJpaRepositories("fr.apiatlashub.server.infrastructure.spijpa.database.repository")
+@EntityScan("fr.apiatlashub.server.infrastructure.spijpa.spi.database.entity")
+@EnableJpaRepositories("fr.apiatlashub.server.infrastructure.spijpa.spi.database.repository")
 public class AggregationConfiguration {}

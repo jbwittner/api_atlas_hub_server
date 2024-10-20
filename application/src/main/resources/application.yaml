@@ -13,7 +13,7 @@ server:
 spring:
   jpa:
     show-sql: false
-    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
     hibernate:
       ddl-auto: validate
       naming:

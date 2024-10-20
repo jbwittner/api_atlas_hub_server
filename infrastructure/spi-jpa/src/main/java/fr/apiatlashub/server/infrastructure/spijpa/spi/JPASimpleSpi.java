@@ -1,12 +1,12 @@
-package fr.apiatlashub.server.infrastructure.spijpa;
+package fr.apiatlashub.server.infrastructure.spijpa.spi;
 
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
 import fr.apiatlashub.server.domain.spi.SimpleSpi;
-import fr.apiatlashub.server.infrastructure.spijpa.database.entity.SimpleEntity;
-import fr.apiatlashub.server.infrastructure.spijpa.database.repository.SimpleEntityRepository;
+import fr.apiatlashub.server.infrastructure.spijpa.spi.database.entity.SimpleEntity;
+import fr.apiatlashub.server.infrastructure.spijpa.spi.database.repository.SimpleEntityRepository;
 import lombok.RequiredArgsConstructor;
 
 @Component
