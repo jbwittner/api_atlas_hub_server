@@ -1,0 +1,27 @@
+---
+volumes:
+  db_apiatlashub_volume: null
+services:
+  db:
+    image: mysql:9.0
+    container_name: apiatlashub_database
+    ports:
+    - 3306:3306
+    volumes:
+    - db_apiatlashub_volume:/var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_DATABASE: apiatlashub_db
+      MYSQL_USER: apiatlashub_user
+      MYSQL_PASSWORD: ApiAtlasHub2024
+      MYSQL_ROOT_PASSWORD: RootPassword
+  admindb:
+    depends_on:
+    - db
+    image: phpmyadmin/phpmyadmin:5.2.1
+    container_name: apiatlashub_admindb
+    ports:
+    - 8090:80
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: RootPassword

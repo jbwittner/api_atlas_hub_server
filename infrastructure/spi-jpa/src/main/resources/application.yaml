@@ -1,15 +1,11 @@
 ---
 application:
-  server:
-    port: 9595
   db:
     host: dblocalhost
     port: 5432
     name: dbname
     user: dbuser
     password: dbpassword
-server:
-  port: "${application.server.port}"
 spring:
   jpa:
     show-sql: false
