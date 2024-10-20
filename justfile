@@ -1,4 +1,3 @@
-# Database credentials and configuration
 DB_PASSWORD := "ApiAtlasHub2024"
 DB_USER := "apiatlashub_user"
 DB_DATABASE := "apiatlashub_db"
