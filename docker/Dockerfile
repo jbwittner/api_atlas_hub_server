@@ -13,10 +13,10 @@ COPY ../infrastructure infrastructure
 COPY ../domain domain
 
 # Run the Maven command to compile the project
-RUN mvn clean package -DskipTests -Dcheckstyle.skip
+RUN --mount=type=cache,target=/root/.m2 mvn clean package -DskipTests -Dcheckstyle.skip
 
 # Stage 2: Run the application
-FROM openjdk:21-bullseye
+FROM openjdk:21-slim-bullseye
 
 # Create a new group and user to run the application
 RUN useradd -ms /bin/bash appuser
