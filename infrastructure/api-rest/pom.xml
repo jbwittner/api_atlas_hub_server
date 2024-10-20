@@ -12,7 +12,6 @@
     <name>ApiAtlasHub - Infrastructure - Api REST</name>
     <properties>
         <sonar.projectKey>jbwittner_apiatlashub_server_infrastructure_api_rest</sonar.projectKey>
-        <springboot.version>3.3.4</springboot.version>
     </properties>
     <dependencyManagement>
         <dependencies>

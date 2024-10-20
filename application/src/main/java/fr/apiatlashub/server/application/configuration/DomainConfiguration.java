@@ -5,12 +5,17 @@ import org.springframework.context.annotation.Configuration;
 
 import fr.apiatlashub.server.domain.api.SimpleApi;
 import fr.apiatlashub.server.domain.service.SimpleService;
+import fr.apiatlashub.server.domain.spi.SimpleSpi;
+import lombok.RequiredArgsConstructor;
 
 @Configuration
+@RequiredArgsConstructor
 public class DomainConfiguration {
+
+    private final SimpleSpi simpleSpi;
 
     @Bean
     public SimpleApi simpleApi() {
-        return new SimpleService();
+        return new SimpleService(simpleSpi);
     }
 }

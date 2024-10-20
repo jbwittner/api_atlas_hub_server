@@ -1,0 +1,8 @@
+---
+application:
+  db:
+    host: localhost
+    port: 3306
+    name: apiatlashub_db
+    user: apiatlashub_user
+    password: ApiAtlasHub2024
