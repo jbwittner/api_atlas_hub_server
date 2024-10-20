@@ -92,7 +92,8 @@ jobs:
     env:
       SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}"
     needs:
-    - build-install-application
+    - check-spotless
+    - checkstyle
     steps:
     - name: Checkout Git repository
       uses: actions/checkout@v4
