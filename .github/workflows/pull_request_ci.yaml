@@ -86,6 +86,23 @@ jobs:
     - name: Test and analyse
       working-directory: infrastructure/api-rest
       run: mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+  tests_sonar_infrastructure_spi_jpa:
+    runs-on: ubuntu-22.04
+    name: Test and analyse infrastructure (spi jpa)
+    env:
+      SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}"
+    needs:
+    - build-install-application
+    steps:
+    - name: Checkout Git repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Setup action
+      uses: ./.github/actions/setup-env
+    - name: Test and analyse
+      working-directory: infrastructure/spi-jpa
+      run: mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
   tests_sonar_application:
     runs-on: ubuntu-22.04
     name: Test and analyse application
@@ -109,6 +126,7 @@ jobs:
     needs:
     - tests_sonar_domain
     - tests_sonar_infrastructure_api_rest
+    - tests_sonar_infrastructure_spi_jpa
     - tests_sonar_application
     steps:
     - name: Checkout Git repository
