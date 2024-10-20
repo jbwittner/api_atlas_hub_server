@@ -1,4 +1,4 @@
-package fr.apiatlashub.server.infrastructure.spijpa.database.entity;
+package fr.apiatlashub.server.infrastructure.spijpa.spi.database.entity;
 
 import java.util.UUID;
 
