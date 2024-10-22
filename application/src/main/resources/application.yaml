@@ -15,6 +15,7 @@ application:
     audience: audience
 server:
   port: "${application.server.port}"
+logging.level.root: INFO
 spring:
   jpa:
     show-sql: false

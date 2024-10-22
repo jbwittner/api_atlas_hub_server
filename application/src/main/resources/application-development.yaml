@@ -8,4 +8,4 @@ application:
     password: ApiAtlasHub2024
   oauth2:
     issuer-uri: https://atlashubapi-dev.eu.auth0.com/
-    audience: Bankwiz_server
+    audience: apiatlashub_server
